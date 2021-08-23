@@ -1,4 +1,4 @@
-# CEP Query in Python
+# CEP and CNPJ Query in Python
 
 ### Program made in Python 3.9.5
 
