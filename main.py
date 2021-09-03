@@ -16,31 +16,34 @@ def consultaCpnj(cnpj):
 
 while True:
     opc = input("1 - Consultar CEP\n2 - Consultar CNPJ\n")
-
     os.system('clear')
     
     if opc == "1":
-        try:
 
+        try:
             cepUser = input("Informe o CEP: " + Fore.GREEN)
-            cepUser = cepUser.replace("-","")
-            cepUser = cepUser.replace(".","")
-            cepUser = cepUser.replace("/","")
+            cepUser = cepUser.replace("-","").replace(".","").replace("/","")
 
             data = consultCep(cepUser)
+            
             print(Fore.CYAN + "-" * 60)
             print(Fore.RESET + f"Estado: {Fore.GREEN + data['state']}")
             print(Fore.CYAN + "-" * 60)
+            
             print(Fore.RESET + f"Cidade: {Fore.GREEN + data['city']}")
             print(Fore.CYAN + "-" * 60)
+
             print(Fore.RESET + f"Logradouro: {Fore.GREEN + data['street']}")
             print(Fore.CYAN + "-" * 60)
+
             print(Fore.RESET + f"Bairro: {Fore.GREEN + data['neighborhood']}")
             print(Fore.CYAN + "-" * 60)
+
             print(Fore.RESET + f"Serviço: {Fore.GREEN + data['service']}")
             print(Fore.CYAN + "-" * 60)
 
             opcc = input(Fore.RESET + "\n\nDeseja continuar? [" + Fore.GREEN + "Y" + Fore.RESET + "/" + Fore.RED + "N" + Fore.RESET + "] " + Fore.RESET)
+
             if opcc == "Y" or opcc == "y":
                 os.system('clear')
                 continue
@@ -55,13 +58,11 @@ while True:
     elif opc == "2":
 
         try:
-
             cnpj = input("Informe o CNPJ: " + Fore.GREEN)
-            cnpj = cnpj.replace("-","")
-            cnpj = cnpj.replace(".","")
-            cnpj = cnpj.replace("/","")
+            cnpj = cnpj.replace("-","").replace(".","").replace("/","")
 
             data = consultaCpnj(cnpj)
+
             print(Fore.CYAN + "-" * 60)
             print(Fore.RESET + f"Razão Social: {Fore.GREEN + data['razao_social']}")
             print(Fore.CYAN + "-" * 60)
@@ -118,6 +119,7 @@ while True:
             print(Fore.CYAN + "-" * 60)
 
             opcc = input(Fore.RESET + "\n\nDeseja continuar? [" + Fore.GREEN + "Y" + Fore.RESET + "/" + Fore.RED + "N" + Fore.RESET + "] " + Fore.RESET)
+
             if opcc == "Y" or opcc == "y":
                 os.system('clear')
                 continue
