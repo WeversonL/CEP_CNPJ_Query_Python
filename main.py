@@ -29,18 +29,18 @@ while True:
 
             data = consultCep(cepUser)
             print(Fore.CYAN + "-" * 60)
-            print(Fore.WHITE + f"Estado: {Fore.GREEN + data['state']}")
+            print(Fore.RESET + f"Estado: {Fore.GREEN + data['state']}")
             print(Fore.CYAN + "-" * 60)
-            print(Fore.WHITE + f"Cidade: {Fore.GREEN + data['city']}")
+            print(Fore.RESET + f"Cidade: {Fore.GREEN + data['city']}")
             print(Fore.CYAN + "-" * 60)
-            print(Fore.WHITE + f"Logradouro: {Fore.GREEN + data['street']}")
+            print(Fore.RESET + f"Logradouro: {Fore.GREEN + data['street']}")
             print(Fore.CYAN + "-" * 60)
-            print(Fore.WHITE + f"Bairro: {Fore.GREEN + data['neighborhood']}")
+            print(Fore.RESET + f"Bairro: {Fore.GREEN + data['neighborhood']}")
             print(Fore.CYAN + "-" * 60)
-            print(Fore.WHITE + f"Serviço: {Fore.GREEN + data['service']}")
+            print(Fore.RESET + f"Serviço: {Fore.GREEN + data['service']}")
             print(Fore.CYAN + "-" * 60)
 
-            opcc = input(Fore.WHITE + "\n\nDeseja continuar? [" + Fore.GREEN + "Y" + Fore.WHITE + "/" + Fore.RED + "N" + Fore.WHITE + "] " + Fore.RESET)
+            opcc = input(Fore.RESET + "\n\nDeseja continuar? [" + Fore.GREEN + "Y" + Fore.RESET + "/" + Fore.RED + "N" + Fore.RESET + "] " + Fore.RESET)
             if opcc == "Y" or opcc == "y":
                 os.system('clear')
                 continue
@@ -63,46 +63,61 @@ while True:
 
             data = consultaCpnj(cnpj)
             print(Fore.CYAN + "-" * 60)
-            print(Fore.WHITE + f"Razão Social: {Fore.GREEN + data['razao_social']}")
+            print(Fore.RESET + f"Razão Social: {Fore.GREEN + data['razao_social']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Nome fantasia: {Fore.GREEN + data['nome_fantasia']}")
+            print(Fore.RESET + f"Nome fantasia: {Fore.GREEN + data['nome_fantasia']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Situação cadastral: {Fore.GREEN + data['descricao_situacao_cadastral']}")
+            print(Fore.RESET + f"Situação cadastral: {Fore.GREEN + data['descricao_situacao_cadastral']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Data situação cadastral: {Fore.GREEN + data['data_situacao_cadastral']}")
+            print(Fore.RESET + f"Data situação cadastral: {Fore.GREEN + data['data_situacao_cadastral']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Inicio de atividade: {Fore.GREEN + data['data_inicio_atividade']}")
+            print(Fore.RESET + f"Inicio de atividade: {Fore.GREEN + data['data_inicio_atividade']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Descrição de atividade: {Fore.GREEN + data['cnae_fiscal_descricao']}")
+            print(Fore.RESET + f"Descrição de atividade: {Fore.GREEN + data['cnae_fiscal_descricao']}")
             print(Fore.CYAN + "-" * 60 + Fore.RESET)
 
-            print(Fore.WHITE + f"Porte da empresa: {Fore.GREEN + data['descricao_porte']}")
+            print(Fore.RESET + f"Porte da empresa: {Fore.GREEN + data['descricao_porte']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Capital social: R$ {Fore.GREEN + str(data['capital_social'])}")
+            print(Fore.RESET + "Capital social: " + Fore.YELLOW + "R$ " + f"{Fore.GREEN + str(data['capital_social'])}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Estado: {Fore.GREEN + data['uf']}")
+            print(Fore.RESET + f"CEP: {Fore.GREEN + data['cep']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Municipio: {Fore.GREEN + data['municipio']}")
+            print(Fore.RESET + f"Estado: {Fore.GREEN + data['uf']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Bairro: {Fore.GREEN + data['bairro']}")
+            print(Fore.RESET + f"Municipio: {Fore.GREEN + data['municipio']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + "Endereço: " + Fore.GREEN + f"{data['descricao_tipo_logradouro']} {data['logradouro']}")
+            print(Fore.RESET + f"Bairro: {Fore.GREEN + data['bairro']}")
             print(Fore.CYAN + "-" * 60)
 
-            print(Fore.WHITE + f"Número do endereço: {Fore.GREEN + data['numero']}")
+            print(Fore.RESET + "Endereço: " + Fore.GREEN + f"{data['descricao_tipo_logradouro']} {data['logradouro']}")
             print(Fore.CYAN + "-" * 60)
 
-            opcc = input(Fore.WHITE + "\n\nDeseja continuar? [" + Fore.GREEN + "Y" + Fore.WHITE + "/" + Fore.RED + "N" + Fore.WHITE + "] " + Fore.RESET)
+            print(Fore.RESET + f"Número do endereço: {Fore.GREEN + data['numero']}")
+            print(Fore.CYAN + "-" * 60)
+
+            print(Fore.RESET + f"Complemento: {Fore.GREEN + data['complemento']}")
+            print(Fore.CYAN + "-" * 60)
+
+            print(Fore.RESET + f"Telefone 1° opção: {Fore.GREEN + data['ddd_telefone_1']}")
+            print(Fore.CYAN + "-" * 60)
+
+            print(Fore.RESET + f"Telefone 2° opção: {Fore.GREEN + data['ddd_telefone_2']}")
+            print(Fore.CYAN + "-" * 60)
+
+            print(Fore.RESET + f"FAX: {Fore.GREEN + data['ddd_fax']}")
+            print(Fore.CYAN + "-" * 60)
+
+            opcc = input(Fore.RESET + "\n\nDeseja continuar? [" + Fore.GREEN + "Y" + Fore.RESET + "/" + Fore.RED + "N" + Fore.RESET + "] " + Fore.RESET)
             if opcc == "Y" or opcc == "y":
                 os.system('clear')
                 continue
