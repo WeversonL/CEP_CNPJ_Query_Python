@@ -1,3 +1,7 @@
+# Project discontinued
+
+The project will not have updates or fixes at this time. Feel free to fork the project if you wish!
+
 # CEP and CNPJ Query in Python
 
 ### Program made in Python 3.9.5
